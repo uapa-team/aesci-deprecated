@@ -12,7 +12,7 @@ import "../../../css/unal.css";
 
 import "./unal.js";
 import './jquery.js';
-import {logout} from "./../../../Auth.js"
+import {logout, isLogged} from "./../../../Auth.js"
 
 class UnalCanvas extends Component {
 
@@ -240,7 +240,7 @@ class UnalCanvas extends Component {
                                     <span className="caret-right"/>
                                 </div>
                                 {(() => {
-                                    if (localStorage.getItem("jwt")) {
+                                    if (isLogged()) {
                                         return (
                                             <div className="btn-group">
                                                 {/*eslint-disable-next-line*/}

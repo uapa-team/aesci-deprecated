@@ -1,6 +1,7 @@
 import {useAuthTokenInterceptor} from "axios-jwt";
 import {isLoggedIn, setAuthTokens, clearAuthTokens, getAccessToken} from "axios-jwt";
 import axios from "axios";
+import jwtDecode from "jwt-decode";
 
 const apiClient = axios.create();
 
@@ -23,7 +24,8 @@ export const login = async (username, password) => {
                 accessToken: response.data.access,
                 refreshToken: response.data.refresh
             });
-            resolve();
+            sessionStorage.setItem("groups",JSON.stringify(jwtDecode(response.data.access)["groups"]));
+            sessionStorage.setItem("permissions",JSON.stringify(jwtDecode(response.data.access)["permissions"]));
             window.location.reload();
         }, reject)
     });
@@ -59,6 +61,9 @@ const requestRefresh = (refresh) => {
             refreshEndpoint,
             {refresh: refresh}
         ).then(response => {
+            sessionStorage.setItem("groups",JSON.stringify(jwtDecode(response.data.access)["groups"]));
+            sessionStorage.setItem("permissions",JSON.stringify(jwtDecode(response.data.access)["permissions"]));
+            console.log(JSON.stringify(jwtDecode(response.data.access)));
             resolve(response.data.access);
         }, reject);
     });

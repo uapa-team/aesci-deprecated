@@ -32,10 +32,10 @@ class Test extends React.Component {
                         </div>
                     </div>
                     <div className="row test-content" style={{height: "10em"}}>
-
+                        GROUPS: {sessionStorage.getItem("groups")}
                     </div>
                     <div className="row test-content" style={{height: "20em"}}>
-
+                        PERMISSIONS: {sessionStorage.getItem("permissions")}
                     </div>
                 </MainContainer>
             </div>

@@ -36,9 +36,7 @@ class Login extends React.Component {
 
     handleClickLogin = e => {
         login(this.state.username, this.state.password)
-            .then(() => {
-
-            }).catch(error => {
+            .catch(error => {
                 console.log(error);
                 Modal.error({
                     centered: true,
