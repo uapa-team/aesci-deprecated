@@ -1,0 +1,76 @@
+.title, .home-subtitle, .home-content, .lateral-button, .login-button{
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 10px;
+}
+
+.title, .home-subtitle, .lateral-button, .login-button{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title, .home-subtitle, .login-button{
+    background-color: #182f58;
+    color: white;
+}
+
+.trim{
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 2.5em;
+}
+
+.home-subtitle {
+    font-size: 2em;
+}
+
+.home-content {
+    background-color: #bfbfbf;
+    font-size: 1.3em;
+    font-weight: normal ;
+    text-align: justify;
+    padding: 1em 1.5em;
+}
+
+.lateral-button{
+    background-color: #b4bac8;
+    font-size: 1.5em;
+    color: white;
+    min-height: 4em;
+    padding: 0 2em;
+    cursor: pointer;
+}
+
+.lateral-button:hover{
+    background-color: #afb5c3;
+}
+
+.lateral-button:active{
+    background-color: #aab0be;
+}
+
+.login-button{
+    font-size: 2em;
+    padding: 0.2em;
+    cursor: pointer;
+}
+
+.login-button:hover{
+    background-color: #18284e;
+}
+
+.login-button:active{
+    background-color: #192244;
+}
+
+.search-container{
+    margin: 10px;
+}
+
+.search-input{
+    border-radius: 8px;
+}

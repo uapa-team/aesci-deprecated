@@ -1,0 +1,46 @@
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "antd/dist/antd.css";
+import {Form, Input, Button, Checkbox, Typography, message} from "antd";
+import {withRouter} from "react-router-dom";
+import {MainContainer, Tittle} from "./../Home/HomeStyled";
+import './../Home/Home.css';
+import './Test.css';
+import {verify} from "./../../../Auth.js"
+
+const {Search} = Input;
+
+
+class Test extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: "",
+            password: "",
+            selected: 1
+        };
+        verify();
+    }
+
+    render() {
+        return (
+            <div>
+                <MainContainer>
+                    <div className="row">
+                        <div className="col element title">
+                            Academic Evaluation System for Continuous Improvement
+                        </div>
+                    </div>
+                    <div className="row test-content" style={{height: "10em"}}>
+
+                    </div>
+                    <div className="row test-content" style={{height: "20em"}}>
+
+                    </div>
+                </MainContainer>
+            </div>
+        );
+    }
+}
+
+export default withRouter(Test);
