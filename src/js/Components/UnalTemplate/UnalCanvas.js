@@ -216,7 +216,7 @@ class UnalCanvas extends Component {
                             </div>
                             <div className="mainMenu">
                                 <div className="btn-group">
-                                    <a href="/aesci/home" className="btn btn-default dropdown-toggle">
+                                    <a href="/" className="btn btn-default">
                                         Inicio
                                     </a>
                                     <span className="caret-right"/>
@@ -224,7 +224,7 @@ class UnalCanvas extends Component {
                                 <div className="btn-group">
                                     <a
                                         href="/contact"
-                                        className="btn btn-default dropdown-toggle"
+                                        className="btn btn-default"
                                     >
                                         Contáctenos
                                     </a>

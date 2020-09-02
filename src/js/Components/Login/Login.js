@@ -47,7 +47,7 @@ class Login extends React.Component {
     };
 
     handleReturn = () => {
-        if (this.state.selected == 0) {
+        if (this.state.selected === 0) {
             this.props.history.push("/home")
         } else {
             this.setState({selected: 0})
@@ -71,7 +71,7 @@ class Login extends React.Component {
                             onClick={this.handleReturn}
                         />
                     </div>
-                    {this.state.selected == 0 &&
+                    {this.state.selected === 0 &&
                     <div className="col">
                         <div className="row">
                             <div className="subtitle">
@@ -133,7 +133,7 @@ class Login extends React.Component {
                         </div>
                     </div>}
 
-                    {this.state.selected != 0 &&
+                    {this.state.selected !== 0 &&
                     <div className="col">
 
                         <div className="row" style={{marginTop: "2em", justifyContent: "center"}}>
@@ -146,6 +146,7 @@ class Login extends React.Component {
                                     width={250}
                                     height={250}
                                     style={{margin: "auto"}}
+                                    alt="profile"
                                 />
                             </div>
                             <div className="col-5 trim">

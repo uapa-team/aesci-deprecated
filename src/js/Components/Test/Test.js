@@ -1,15 +1,11 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "antd/dist/antd.css";
-import {Form, Input, Button, Checkbox, Typography, message} from "antd";
 import {withRouter} from "react-router-dom";
-import {MainContainer, Tittle} from "./../Home/HomeStyled";
+import {MainContainer} from "./../Home/HomeStyled";
 import './../Home/Home.css';
 import './Test.css';
 import {verify} from "./../../../Auth.js"
-
-const {Search} = Input;
-
 
 class Test extends React.Component {
     constructor(props) {

@@ -1,12 +1,11 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "antd/dist/antd.css";
-import {Form, Input, Button, Checkbox, Typography, message} from "antd";
+import {Input} from "antd";
 import {withRouter} from "react-router-dom";
-import {MainContainer, Tittle} from "./HomeStyled";
+import {MainContainer} from "./HomeStyled";
 import './Home.css';
 
-const {Title, Text} = Typography;
 const {Search} = Input;
 
 
@@ -56,7 +55,7 @@ class Home extends React.Component {
                     tortor. Vivamus ac ipsum elit. <br/> Phasellus commodo sit amet nulla ac congue. Praesent non nisi
                     arcu. Praesent ornare eleifend orci eu rutrum. Nam nisi purus, facilisis quis metus bibendum, luctus
                     pharetra nibh. </div>;
-            case 3:
+            default:
                 return <div> Relation Among Student Outcomes and Courses <br/> Donec interdum condimentum magna, nec
                     porta libero congue non. Nulla rutrum tortor eget gravida luctus. Fusce finibus vel urna in auctor.
                     Duis posuere venenatis purus in sagittis. Duis vulputate eu neque volutpat molestie. <br/> Maecenas

@@ -37,12 +37,11 @@ const PublicRoute = ({component: Component, ...rest}) => (
 );
 
 ReactDOM.render(
-    <BrowserRouter basename={"/"}>
+    <BrowserRouter basename={"/aesci"}>
         <UnalCanvas>
             <Switch>
                 <PrivateRoute exact path="/home" component={Test}/>
                 <PublicRoute exact path="/" component={Home}/>
-                <PublicRoute exact path="/home" component={Home}/>
                 <PublicRoute exact path="/login" component={Login}/>
             </Switch>
         </UnalCanvas>
